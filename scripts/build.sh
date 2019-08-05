@@ -1,0 +1,3 @@
+# emcc -O1 -s WASM=1 -s EXTRA_EXPORTED_RUNTIME_METHODS='["cwrap"]' ./src/clipper/clipper.cpp -I ./src/clipper/clipper.hpp
+emcc -s WASM=1 -s ALLOW_MEMORY_GROWTH=1 -s ONLY_MY_CODE=1 -s EXPORTED_FUNCTIONS="[]" -I ./src/clipper/clipper.hpp -o ./src/wasm/clipper.js ./src/clipper/clipper.cpp
+# emcc -s WASM=1 -s ONLY_MY_CODE=1 -s EXPORTED_FUNCTIONS="['_fibonacci']" -o src/wasm/output.js src/clipper/clipper.cpp
